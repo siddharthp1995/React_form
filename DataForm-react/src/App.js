@@ -35,6 +35,7 @@ class App extends React.Component {
 
    onRegisterFormSubmit(e) {
       e.preventDefault(); // to prevent the default behaviour of submit button that is referesh the entire page
+      this.showDetailFilled();
       console.log(
           `name : ${this.state.name}
           phone_number : ${this.state.phone_number}
@@ -44,7 +45,7 @@ class App extends React.Component {
           date : ${this.state.date}`
       );
    }
-  
+
    render() {
       return (
          <div className = "wrapper">
@@ -77,7 +78,7 @@ class App extends React.Component {
                   </div>
                </div>
                <div className = "submitDiv">
-                  <button className = "submitBtn" onClick = {this.showDetailFilled}><div>SUBMIT</div></button>
+                  <button className = "submitBtn"><div>SUBMIT</div></button>
                </div>
             </form>
             <div className = "filledData" id = "DetailFilled">
