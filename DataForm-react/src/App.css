@@ -1,0 +1,136 @@
+.wrapper {
+  width: 100%;
+  font-size: 24px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.wrapper .subWrapper {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.wrapper .subWrapper .enquiryDiv {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.wrapper .subWrapper .submitDiv {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  float: left;
+  text-align: center;
+}
+
+.wrapper .subWrapper .submitBtn {
+  width: 210px;
+  padding: 0;
+  font-size: 18px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background: #cc8800;
+  outline: none;
+  cursor: pointer;
+}
+
+.wrapper .subWrapper .submitBtn:hover {
+  background: #966400;
+}
+
+.wrapper .subWrapper .submitDiv .submitBtn div {
+  padding: 8px;
+}
+
+.wrapper .subWrapper .formDiv {
+  margin-bottom: 15px;
+}
+
+.wrapper .subWrapper .formDiv .input {
+  width: 90%;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  border: 0;
+  border-bottom: 1px solid;
+  font-size: 16px;
+  outline: 0;
+}
+
+.wrapper .subWrapper .formDiv .input:focus {
+  border-bottom: 2px solid red;
+}
+
+input[type="date"]:before {
+  content: attr(placeholder) !important;
+  margin-right: 0.5em;
+  color: #707070;
+  font-family: Arial;
+}
+
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: "";
+}
+
+.wrapper .filledData {
+  margin: 0 auto;
+  margin-top: 15px;
+  clear: both;
+  font-size: 16px;
+  text-align: center;
+}
+
+.wrapper #DetailFilled {
+  display: none;
+}
+
+.wrapper .filledData #mySpan {
+  color: red;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper .subWrapper .formDiv .leftFormDiv,
+  .wrapper .subWrapper .formDiv .rightFormDiv
+  {
+    float: left;
+    width: 50%;
+  }
+
+  .wrapper .subWrapper .enquiryDiv div,
+  .wrapper .subWrapper .submitBtn {
+    margin-right: 90px;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper .subWrapper .formDiv .leftFormDiv,
+  .wrapper .subWrapper .formDiv .rightFormDiv
+  {
+    width: 100%;
+  }
+
+  .wrapper .subWrapper .formDiv {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .wrapper .subWrapper {
+    width: 330px;
+  }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  .wrapper .subWrapper .enquiryDiv div,
+  .wrapper .subWrapper .submitBtn {
+    margin-right: 20px;
+  }
+}
+
