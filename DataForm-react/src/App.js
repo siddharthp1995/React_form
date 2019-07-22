@@ -15,6 +15,7 @@ class App extends React.Component {
      }
      this.updateState = this.updateState.bind(this);
      this.showDetailFilled = this.showDetailFilled.bind(this);
+     this.onRegisterFormSubmit = this.onRegisterFormSubmit.bind(this);
    };
 
    updateState(event) {
@@ -31,11 +32,23 @@ class App extends React.Component {
       ReactDOM.findDOMNode(mySpan).style.color = 'red';
       ReactDOM.findDOMNode(detailFilled).style.display = 'block';
    }
+
+   onRegisterFormSubmit(e) {
+      e.preventDefault(); // to prevent the default behaviour of submit button that is referesh the entire page
+      console.log(
+          `name : ${this.state.name}
+          phone_number : ${this.state.phone_number}
+          people_number : ${this.state.people_number}
+          mail_id : ${this.state.mail_id}
+          occassion : ${this.state.occassion}
+          date : ${this.state.date}`
+      );
+   }
   
    render() {
       return (
          <div className = "wrapper">
-            <div className= "subWrapper">
+            <form className= "subWrapper" onSubmit={this.onRegisterFormSubmit}>
                <div className = "enquiryDiv">
                   <div>Enquiry Here</div>
                </div>
@@ -66,7 +79,7 @@ class App extends React.Component {
                <div className = "submitDiv">
                   <button className = "submitBtn" onClick = {this.showDetailFilled}><div>SUBMIT</div></button>
                </div>
-            </div>
+            </form>
             <div className = "filledData" id = "DetailFilled">
                <div style = {{width: '90%'}}>
                   <div>Your Entered data is ...</div>
