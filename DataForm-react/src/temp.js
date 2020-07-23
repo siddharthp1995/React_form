@@ -3,7 +3,7 @@ import "./App.css";
 
 class Temp extends React.Component {
   render() {
-    return <div>hello</div>;
+    return <div>hello world</div>;
   }
 }
 
